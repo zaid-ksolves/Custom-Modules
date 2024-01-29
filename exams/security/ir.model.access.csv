@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+exams.access_exams_student,access_exams_student,exams.model_exams_student,base.group_user,1,1,,1
+exams.access_exams_subject,access_exams_subject,exams.model_exams_subject,base.group_user,1,1,1,1
+exams.access_exams_exam,access_exams_exam,exams.model_exams_exam,base.group_user,1,1,1,1
+exams.access_exams_home,access_exams_home,exams.model_exams_home,base.group_user,1,1,1,1

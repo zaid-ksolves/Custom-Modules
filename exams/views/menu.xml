@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_school_root"
+              name="Exams"
+              sequence="10"/>
+<!---->
+    <menuitem id="menu_school_all"
+              parent="menu_school_root"
+              name="All"
+              sequence="10"/>
+
+
+
+</odoo>

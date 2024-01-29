@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_exam_form" model="ir.ui.view">
+        <field name="name">exams.exam.form</field>
+        <field name="model">exams.exam</field>
+        <field name="arch" type="xml">
+            <form string="Exam Form">
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="subject_id"/>
+                        <field name="marks"/>
+                        <field name="exam_date"/>
+                        <field name="grade"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_exam_form" model="ir.actions.act_window">
+        <field name="name">Exam Form</field>
+        <field name="res_model">exams.exam</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_exam_form" name="Exam Form"
+              parent="menu_school_all"
+              action="action_exam_form"/>
+</odoo>

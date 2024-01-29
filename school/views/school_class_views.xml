@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_class_form" model="ir.ui.view">
+            <field name="name">class.form</field>
+            <field name="model">school.class</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="teachers_ids" widget="many2many_tags"/>
+                        <field name="student_line">
+                            <tree>
+                                <field name="student_id"/>
+                                <field name="class_id"/>
+                                <field name="english"/>
+                                <field name="hindi"/>
+                                <field name="physics"/>
+                                <field name="chemistry"/>
+                                <field name="maths"/>
+                                <field name="total_marks"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+
+    <record id="action_class" model="ir.actions.act_window">
+        <field name="name">Classes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.class</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem id="menu_school_class"
+              parent="menu_school_teacher"
+              name="Classes"
+              action="action_class"
+              sequence="10"/>
+
+</odoo>

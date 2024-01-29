@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_exam_form" model="ir.ui.view">
+        <field name="name">exams.home.form</field>
+        <field name="model">exams.home</field>
+        <field name="arch" type="xml">
+            <form string="Exam Form">
+                <sheet>
+                    <strong>Welcome...</strong>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="home_page" model="ir.actions.act_window">
+        <field name="name">Home Page Form</field>
+        <field name="res_model">exams.home</field>
+        <field name="view_mode">form</field>
+    </record>
+
+</odoo>

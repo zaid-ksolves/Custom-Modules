@@ -1,0 +1,7 @@
+<odoo>
+
+    <menuitem
+    id="root_menu"
+    name="Persons"/>
+
+</odoo>

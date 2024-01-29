@@ -1,0 +1,27 @@
+<odoo>
+    <record id="view_subject_form" model="ir.ui.view">
+        <field name="name">exams.subject.form</field>
+        <field name="model">exams.subject</field>
+        <field name="arch" type="xml">
+            <form string="Subject Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="exams_line" widget="one2many_list"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_subject_form" model="ir.actions.act_window">
+        <field name="name">Subject Form</field>
+        <field name="res_model">exams.subject</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_subject_form" name="Subject Form"
+              parent="menu_school_all"
+              action="action_subject_form"/>
+</odoo>

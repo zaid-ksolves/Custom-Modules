@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    Teacher-->
+    <menuitem id="menu_teacher"
+              name="Teachers"
+              parent="hr.menu_hr_root"
+              sequence="20"/>
+
+<!--    <menuitem id="menu_teacher_list"-->
+<!--              name="Teacher List"-->
+<!--              parent="menu_teacher"-->
+<!--              action="action_teacher_tree_view"/>-->
+
+    <menuitem id="menu_create_teacher"
+              name="Create Teacher"
+              parent="menu_teacher"
+              action="action_teacher_form_view"/>
+
+    <!--    Class-->
+    <menuitem id="menu_class"
+              name="Classes"
+              parent="hr.menu_hr_root"
+              sequence="21"/>
+
+<!--    <menuitem id="menu_class_list"-->
+<!--              name="Class List"-->
+<!--              parent="menu_class"-->
+<!--              action="action_class_tree_view"/>-->
+
+    <menuitem id="menu_create_class"
+              name="Create Class"
+              parent="menu_class"
+              action="action_class_form_view"/>
+    <!--class-->
+
+
+</odoo>

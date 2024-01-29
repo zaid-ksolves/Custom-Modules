@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_student_form" model="ir.ui.view">
+        <field name="name">exams.student.form</field>
+        <field name="model">exams.student</field>
+        <field name="arch" type="xml">
+            <form string="Student Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="age"/>
+                        <field name="gender"/>
+                        <field name="address"/>
+                        <field name="exams_line" widget="one2many_list"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_student_form" model="ir.actions.act_window">
+        <field name="name">Student Form</field>
+        <field name="res_model">exams.student</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_student_form"
+              parent="menu_school_all"
+              name="Student Form"
+              action="action_student_form"/>
+</odoo>

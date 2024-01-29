@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_student" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form,kanban,pivot</field>
+
+    </record>
+
+    <record id="view_school_student_pivot" model="ir.ui.view">
+        <field name="name">school.student.pivot</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="name" type="row"/>
+                <field name="rollNo" type="col"/>
+                <field name="age" />
+                <field name="date_of_birth" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_school_student_form" model="ir.ui.view">
+        <field name="name">school.student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="rollNo"/>
+                        <field name="age"/>
+                        <field name="date_of_birth"/>
+                        <field name="gender"/>
+                        <field name="school_id"/>
+
+                    </group>
+                    <notebook>
+                        <page string="Subjects">
+                            <group>
+                                <field name="class_line" string="Subjects">
+                                    <tree editable="bottom">
+                                        <field name="class_id" string="Class"/>
+                                        <field name="english"/>
+                                        <field name="hindi"/>
+                                        <field name="maths"/>
+                                        <field name="physics"/>
+                                        <field name="chemistry"/>
+                                        <field name="total_marks"/>
+                                    </tree>
+                                </field>
+
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_school_student_tree" model="ir.ui.view">
+        <field name="name">school.student.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="rollNo"/>
+                <field name="age"/>
+                <field name="date_of_birth"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <!--    <record id="action_school_student" model="ir.actions.act_window">-->
+    <!--            <field name="name">Students</field>-->
+    <!--            <field name="res_model">school.student</field>-->
+    <!--            <field name="view_mode">tree,form</field>-->
+    <!--            <field name="type">ir.actions.act_window</field>-->
+    <!--        </record>-->
+
+    <menuitem id="menu_school_teacher"
+              parent="menu_school_root"
+              name="Menu"
+              sequence="10"/>
+    <record id="view_student_form" model="ir.ui.view">
+        <field name="name">student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="age"/>
+
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_school_student"
+              parent="menu_school_teacher"
+              name="Student"
+              action="action_student"
+              sequence="10"/>
+</odoo>

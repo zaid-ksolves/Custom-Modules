@@ -1,0 +1,66 @@
+<odoo>
+    <record id="contacts_form_inherit" model="ir.ui.view">
+        <field name="name">contacts.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="before">
+                <button string="Transfer Data" type="object" name="create_record" class="btn btn-primary"/>
+
+            </xpath>
+
+        </field>
+    </record>
+
+    <!--    <record id="school_class_form" model="ir.ui.view">-->
+    <!--        <field name="name">Person form</field>-->
+    <!--        <field name="model">res.partner</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <form>-->
+
+    <!--                <sheet>-->
+    <!--                    <group>-->
+    <!--                        <field name="name"/>-->
+    <!--                        <field name="age"/>-->
+    <!--&lt;!&ndash;                        <field name="date_of_birth"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <field name="chemistry"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <field name="maths"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <field name="marks_obtained"/>&ndash;&gt;-->
+    <!--                    </group>-->
+    <!--                </sheet>-->
+    <!--            </form>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <!--    <record id="view_class_tree" model="ir.ui.view">-->
+    <!--        <field name="name">Person Tree</field>-->
+    <!--        <field name="model">res.partner.form</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <tree>-->
+
+    <!--                <field name="name"/>-->
+    <!--                <field name="age"/>-->
+    <!--&lt;!&ndash;                <field name="date_of_birth"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <field name="chemistry"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <field name="maths"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <field name="marks_obtained"/>&ndash;&gt;-->
+
+    <!--            </tree>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+
+    <!--    <record id="person_action" model="ir.actions.act_window">-->
+    <!--        <field name="name">Person</field>-->
+    <!--        <field name="res_model">res.partner.form</field>-->
+    <!--        <field name="view_mode">tree,form</field>-->
+    <!--    </record>-->
+
+    <!--    <menuitem-->
+    <!--            id="person_menu"-->
+    <!--            name="Person"-->
+    <!--            parent="dual_database.root_menu"-->
+    <!--            action="person_action"-->
+    <!--            sequence="10"/>-->
+</odoo>
