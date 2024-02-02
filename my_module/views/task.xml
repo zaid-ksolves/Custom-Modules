@@ -1,0 +1,19 @@
+<odoo>
+    <record id="project_custom_inherit" model="ir.ui.view">
+        <field name="name">project.custom.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_button_box']" position="inside">
+                <button class="oe_stat_button" type="object" name="open_so_wiz" string="Sale Orders"
+                        icon="fa-pencil-square-o">Sale Orders
+                </button>
+            </xpath>
+            <xpath expr="//notebook/page[@name='extra_info']" position="after">
+                <page string="Linked Sale Order" name="linked_sale_order">
+                    <field name="sales"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

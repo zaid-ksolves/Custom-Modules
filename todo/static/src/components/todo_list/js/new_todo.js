@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { registry } from '@web/core/registry';
-const { Component, useState, onWillStart, useRefwss } = owl;
+const { Component, useState, onWillStart, useRef } = owl;
 import { useService } from "@web/core/utils/hooks";
 
 export class OwlTodoList extends Component {
@@ -13,7 +13,7 @@ export class OwlTodoList extends Component {
             activeId: false,
         })
         this.orm = useService("orm")
-        this.model = "todo.todo.list"
+        this.model = "person.list"
         this.searchInput = useRef("search-input")
 
         onWillStart(async ()=>{
